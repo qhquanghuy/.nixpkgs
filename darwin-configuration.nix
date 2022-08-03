@@ -18,7 +18,9 @@
   # $ darwin-rebuild changelog
   system.stateVersion = 4;
 
+  imports = [
+    <home-manager/nix-darwin>
+    ./users/huy_nq
+  ];
 
-
-  imports = [ <home-manager/nix-darwin> ./users/huynq ];
 }
