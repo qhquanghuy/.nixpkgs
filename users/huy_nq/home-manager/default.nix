@@ -35,6 +35,7 @@
       nodejs
       python3
       (ammonite.override { jre = jdk8; })
+      dbeaver
     ];
 
   # This value determines the Home Manager release that your
