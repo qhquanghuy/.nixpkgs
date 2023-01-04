@@ -19,19 +19,20 @@
   home.packages =
     with pkgs; [
       thefuck
-      sbt
-      slack
+      (sbt.override { jre = jdk17_headless; })
       docker
       docker-compose
       # google-cloud-sdk
       postman
       postgresql
       colima
-      jdk
+      jdk17_headless
       grpcurl
       terraform
       nodejs
       kubectl
+      dbeaver
+      ngrok
     ];
 
   # This value determines the Home Manager release that your

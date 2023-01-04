@@ -20,7 +20,7 @@
 
   imports = [
     <home-manager/nix-darwin>
-    ./users/huy_nq
+    ./users/huynq
   ];
 
 }

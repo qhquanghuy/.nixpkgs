@@ -13,6 +13,7 @@
     initExtraFirst = ''
      export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
      export PATH="$PATH:$HOME/google-cloud-sdk/bin"
+     export PATH="$PATH:$HOME/Projects/anymind/anychat/anychat_local_env/scripts"
     '';
     plugins = [
       {
@@ -34,5 +35,9 @@
       theme = "robbyrussell";
       plugins = ["git" "thefuck"];
     };
+
+    initExtra = ''
+      set -o vi
+    '';
   };
 }
