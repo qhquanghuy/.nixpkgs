@@ -33,6 +33,7 @@
       kubectl
       dbeaver
       ngrok
+      jq
     ];
 
   # This value determines the Home Manager release that your

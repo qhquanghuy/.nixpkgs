@@ -14,6 +14,9 @@
      export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
      export PATH="$PATH:$HOME/google-cloud-sdk/bin"
      export PATH="$PATH:$HOME/Projects/anymind/anychat/anychat_local_env/scripts"
+     export TESTCONTAINERS_HOST_OVERRIDE=$(colima ls -j | jq -r '.address')
+     export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
+     export DOCKER_HOST=unix://$HOME/.colima/docker.sock
     '';
     plugins = [
       {
