@@ -18,9 +18,13 @@
   # $ darwin-rebuild changelog
   system.stateVersion = 4;
 
+  nix.extraOptions = ''
+    experimental-features = nix-command
+  '';
+
   imports = [
     <home-manager/nix-darwin>
-    ./users/huynq
+    ./users/huy_nq
   ];
 
 }
