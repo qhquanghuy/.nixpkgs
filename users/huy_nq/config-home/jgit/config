@@ -1,0 +1,9 @@
+[filesystem "Azul Systems, Inc.|1.8.0_292|/dev/disk1s7"]
+	timestampResolution = 1001 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "Azul Systems, Inc.|1.8.0_382|/dev/disk1s7"]
+	timestampResolution = 1001 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "Azul Systems, Inc.|19.0.2|/dev/disk1s7"]
+	timestampResolution = 4000 nanoseconds
+	minRacyThreshold = 0 nanoseconds

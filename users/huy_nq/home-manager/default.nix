@@ -1,4 +1,4 @@
-{ username, homeDirectory }: { config, pkgs, lib, ... }:
+{ username, homeDirectory }: { config, pkgs, lib, fetchurl, ... }:
 
 {
   # Home Manager needs a bit of information about you and the
@@ -26,7 +26,14 @@
       google-cloud-sdk
       awscli2
       aws-vault
-      postman
+      (postman.overrideAttrs(old: rec {
+        version = "10.18.10";
+        src = pkgs.fetchurl {
+          url = "https://dl.pstmn.io/download/version/${version}/osx_64";
+          hash = "sha256-HY7K+f0KSxkEZ80sdEAFNXGIogkDXuvzEzB7rcSSIsg=";
+          name = "${old.pname}-${version}.zip";
+        };
+      }))
       postgresql
       colima
       jdk8
@@ -36,6 +43,11 @@
       python3
       (ammonite.override { jre = jdk8; })
       dbeaver
+      ngrok
+      (spark.override { RSupport = false; hadoop = hadoop.override { openssl = openssl; }; })
+      rustup
+      nix-tree
+      jq
     ];
 
   # This value determines the Home Manager release that your
@@ -63,6 +75,12 @@
     settings = { ignorecase = true; };
     extraConfig = ''
       set mouse=a
+    '';
+  };
+
+  home.activation = {
+    linkJdk = lib.hm.dag.entryAfter ["writeBoundary"] ''
+      $DRY_RUN_CMD sudo ln -sf ${pkgs.jdk8.outPath} $VERBOSE_ARG /Library/Java/JavaVirtualMachines/jdk8
     '';
   };
 
