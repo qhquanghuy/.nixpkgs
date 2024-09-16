@@ -16,7 +16,7 @@
      export PATH="$PATH:$HOME/Projects/anymind/anychat/anychat_local_env/scripts"
      export TESTCONTAINERS_HOST_OVERRIDE=$(colima ls -j | jq -r '.address')
      export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
-     export DOCKER_HOST=unix://$HOME/.colima/docker.sock
+     export DOCKER_HOST=unix://${config.xdg.configHome}/colima/docker.sock
     '';
     plugins = [
       {

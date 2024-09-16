@@ -19,12 +19,12 @@
   system.stateVersion = 4;
 
   nix.extraOptions = ''
-    experimental-features = nix-command
+    experimental-features = nix-command flakes
   '';
 
   imports = [
     <home-manager/nix-darwin>
-    ./users/huy_nq
+    ./users/huynq
   ];
 
 }

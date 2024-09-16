@@ -4,3 +4,18 @@
 [filesystem "Azul Systems, Inc.|19.0.1|/dev/disk3s5"]
 	timestampResolution = 2000 nanoseconds
 	minRacyThreshold = 0 nanoseconds
+[filesystem "Azul Systems, Inc.|17.0.8|/dev/disk3s5"]
+	timestampResolution = 6000 nanoseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "Azul Systems, Inc.|21|/dev/disk3s5"]
+	timestampResolution = 3000 nanoseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "Azul Systems, Inc.|17.0.8.1|/dev/disk3s5"]
+	timestampResolution = 3000 nanoseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "Azul Systems, Inc.|17.0.10|/dev/disk3s5"]
+	timestampResolution = 87000 nanoseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "Azul Systems, Inc.|21.0.2|/dev/disk3s5"]
+	timestampResolution = 3000 nanoseconds
+	minRacyThreshold = 0 nanoseconds

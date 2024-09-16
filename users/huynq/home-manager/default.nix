@@ -19,21 +19,26 @@
   home.packages =
     with pkgs; [
       thefuck
-      (sbt.override { jre = jdk17_headless; })
+      (sbt.override { jre = jdk21_headless; })
       docker
       docker-compose
+      docker-buildx
       # google-cloud-sdk
       postman
       postgresql
       colima
-      jdk17_headless
+      jdk21_headless
       grpcurl
       terraform
       nodejs
       kubectl
-      dbeaver
+      dbeaver-bin
       ngrok
       jq
+      rover
+      (spark.override { RSupport = false; })
+      discord
+      scala-cli
     ];
 
   # This value determines the Home Manager release that your
@@ -53,6 +58,11 @@
     enable = true;
     userName = "Huy Nguyen";
     userEmail = "huynq@anymindgroup.com";
+    extraConfig = {
+      push = {
+        autoSetupRemote = true;
+      };
+    };
   };
 
   programs.vim = {
